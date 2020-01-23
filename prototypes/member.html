@@ -47,15 +47,29 @@ li a:hover {
   background-color: #F5EA5B;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 1px;
+}
+
 
 </style>
 </head>
 <body>
 
 <!--
-####################################################### 
+#######################################################
 ################ Navigation Bar #######################
-####################################################### 
+#######################################################
 -->
 
 <ul>
@@ -67,10 +81,18 @@ li a:hover {
   <li><a href="contact.html">Contact</a></li>
 </ul>
 
-<p><a href="https://datajam.it.pointpark.edu/"><img src="Datajam.png"></a></p>
+<!-- <p><a href="https://datajam.it.pointpark.edu/"><img src="Datajam.png"></a></p>
 
 <h1>ITSO Awards</h1>
-<img src="PioneerPathfinder.png">
+<img src="PioneerPathfinder.png"> -->
+
+<div class="row">
+  <div class="column">
+  <a href="https://datajam.it.pointpark.edu/"><img src="Datajam.png"></a>
+  </div>
+  <div class="column">
+  <img src="PioneerPathfinder.png">
+  </div>
 
 
 <div class="footer">
