@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<center>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  h1 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align: left;
+}
+p{
+  text-align: left;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after{
+  content:'\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after{
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+body {
+  font-size: 20px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: orange;
+   color: black;
+   text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: 	rgb(60, 150, 50);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #F5EA5B;
+}
+
+.active {
+  background-color: #F5EA5B;
+}
+</style>
+</head>
+<body>
+
+
+<ul>
+  <li><a href="index.html"><img src="ITSOlogo.png"></a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="member.html">Members Page</a></li>
+  <li><a class="active"<a href="technology.html">Technologies</a></li>
+  <li><a href="calendar.html">Calendar</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+<button type="button" class="collapsible">Text Editors</button>
+<div class="content">
+  <h1>Vim</h1>
+  <p>--</p>
+  <h1>Notepad++</h1>
+  <p>--</p>
+  <h1>Atom</h1>
+  <p>--</p>
+  </div>
+<button type="button" class="collapsible">Programming Languages</button>
+<div class="content">
+  <h1>JavaScript</h1>
+  <p>Javascript, often abbreviated as JS, is a high-level, just-in-time compiled, multi-paradigm programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object oriented, and first-class functions.</p>
+  <h1>HTML</h1>
+  <p>----</p>
+  <h1>CSS</h1>
+  <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+  <h1>Java</h1>
+  <p>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.</p>
+  <h1>Python</h1>
+  <p>Python is an integrated, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991. Python's design philosophy emphasizes code readability with its notable use of significant whitespace.</p>
+</div>
+<button type="button" class="collapsible">Database Technologies</button>
+<div class="content">
+  <h1>MySQL</h1>
+  <p>--</p>
+  <h1>MongoDB</h1>
+  <p>--</p>
+  <h1>NoSQL</h1>
+  <p>--</p>
+</div>
+<button type="button" class="collapsible">Other Software</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Hardware</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+
+
+
+<div class="footer">
+  <p><small>Designed using raw code by members of the Information Technology Student Organization</small></p>
+</div>
+</body>
+</html>
